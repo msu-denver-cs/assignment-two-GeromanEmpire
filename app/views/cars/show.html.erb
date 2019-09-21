@@ -1,12 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @car.name %>
+  <strong>Model:</strong>
+  <%= @car.model %>
 </p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @car.make.name %>
+</p>
+
+<p>
+  <strong>Vin:</strong>
+  <%= @car.vin %>
+</p>
+
 <ul>
-  <% @car.parts.each do |book| %>
-    <li><%= book.name %></li>
+  <% @car.parts.each do |part| %>
+    <li><%= part.name %></li>
   <% end %>
 </ul>
 
