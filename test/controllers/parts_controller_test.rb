@@ -45,4 +45,14 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to parts_url
   end
+
+  test "should find parts from the fixture" do
+    assert Part.where("name like?", "Headlight").length == 1
+  end
+
+  test "searches always return 200" do
+    get search_parts_url, params: { search: "Headlight"}
+    assert_equal 200, status
+  end
+
 end

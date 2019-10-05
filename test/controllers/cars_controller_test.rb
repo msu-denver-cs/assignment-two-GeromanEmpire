@@ -43,6 +43,9 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
       delete car_url(@car)
     end
 
+    assert_redirected_to cars_url
+  end
+
   test "should find cars from the fixture" do
     assert Car.where("model like?", "Corolla").length == 1
   end
@@ -52,6 +55,4 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
     assert_equal 200, status
   end
 
-    assert_redirected_to cars_url
-  end
 end
