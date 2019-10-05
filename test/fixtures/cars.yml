@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  model: MyString
-  vin: MyString
-  make: one
+Corolla:
+  model: Corolla
+  vin: 12345678912345678
+  make: Toyota
 
-two:
-  model: MyString
-  vin: MyString
-  make: two
+Outback:
+  model: Outback
+  vin: 87654321987654321
+  make: Subaru

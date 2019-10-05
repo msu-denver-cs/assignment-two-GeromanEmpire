@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  car: one
-  part: one
+Corolla:
+  car: Corolla
+  part: Battery
 
-two:
-  car: two
-  part: two
+Outback:
+  car: Outback
+  part: Headlight
