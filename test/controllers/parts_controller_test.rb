@@ -47,7 +47,11 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should find parts from the fixture" do
-    assert Part.where("name like?", "Headlight").length == 1
+    assert Part.where("name like ?", "Headlight").length == 1
+  end
+
+  test name "should not find cars from the fixture" do
+    assert Part.where("name like ?", "Nothere").length == 0
   end
 
   test "searches always return 200" do

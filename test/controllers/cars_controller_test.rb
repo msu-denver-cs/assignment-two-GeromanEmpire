@@ -47,7 +47,11 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should find cars from the fixture" do
-    assert Car.where("model like?", "Corolla").length == 1
+    assert Car.where("model like ?", "Corolla").length == 1
+  end
+
+  test name "should not find cars from the fixture" do
+    assert Car.where("model like ?", "Nothere").length == 0
   end
 
   test "searches always return 200" do
